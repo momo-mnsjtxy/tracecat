@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "MCP access | Workspace",
+  title: "MCP 访问 | 工作区",
 }
 
 export default function WorkspaceMcpAccessLayout({

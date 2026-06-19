@@ -47,7 +47,7 @@ export function OrganizationSidebar({
 
   const navSettings = [
     {
-      title: "Custom registry",
+      title: "自定义注册表",
       url: "/organization/settings/custom-registry",
       icon: GitBranchIcon,
       isActive: pathname?.includes("/organization/settings/custom-registry"),
@@ -63,7 +63,7 @@ export function OrganizationSidebar({
       locked: false,
     },
     {
-      title: "Domains",
+      title: "域名",
       url: "/organization/settings/domains",
       icon: GlobeIcon,
       isActive: pathname?.includes("/organization/settings/domains"),
@@ -71,7 +71,7 @@ export function OrganizationSidebar({
       locked: false,
     },
     {
-      title: "Application",
+      title: "应用设置",
       url: "/organization/settings/app",
       icon: Settings2,
       isActive: pathname?.includes("/organization/settings/app"),
@@ -79,7 +79,7 @@ export function OrganizationSidebar({
       locked: false,
     },
     {
-      title: "Audit Logs",
+      title: "审计日志",
       url: "/organization/settings/audit",
       icon: LogsIcon,
       isActive: pathname?.includes("/organization/settings/audit"),
@@ -87,7 +87,7 @@ export function OrganizationSidebar({
       locked: false,
     },
     {
-      title: "Agent",
+      title: "智能体",
       url: "/organization/settings/agent",
       icon: BotIcon,
       isActive: pathname?.includes("/organization/settings/agent"),
@@ -95,7 +95,7 @@ export function OrganizationSidebar({
       locked: false,
     },
     {
-      title: "Git sync",
+      title: "Git 同步",
       url: "/organization/vcs",
       icon: GitBranchIcon,
       isActive: pathname?.includes("/organization/vcs"),
@@ -113,7 +113,7 @@ export function OrganizationSidebar({
 
   const navSecrets = [
     {
-      title: "SSH keys",
+      title: "SSH 密钥",
       url: "/organization/ssh-keys",
       icon: KeyRoundIcon,
       isActive: pathname?.includes("/organization/ssh-keys"),
@@ -123,21 +123,21 @@ export function OrganizationSidebar({
 
   const navManage = [
     {
-      title: "Members",
+      title: "成员",
       url: "/organization/members",
       icon: UsersIcon,
       isActive: pathname?.includes("/organization/members"),
       visible: canViewMembers === true,
     },
     {
-      title: "Sessions",
+      title: "会话",
       url: "/organization/sessions",
       icon: LogInIcon,
       isActive: pathname?.includes("/organization/sessions"),
       visible: canViewMembers === true,
     },
     {
-      title: "Service accounts",
+      title: "服务账户",
       url: "/organization/settings/service-accounts",
       icon: KeyRoundIcon,
       isActive: pathname?.includes("/organization/settings/service-accounts"),
@@ -153,7 +153,7 @@ export function OrganizationSidebar({
             <SidebarMenuButton asChild>
               <Link href="/workspaces" className="text-muted-foreground">
                 <ChevronLeftIcon />
-                <span>Back to workspaces</span>
+                <span>返回工作区</span>
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
@@ -162,7 +162,7 @@ export function OrganizationSidebar({
       <SidebarContent>
         {navSettings.some((item) => item.visible === true) && (
           <SidebarGroup>
-            <SidebarGroupLabel>Settings</SidebarGroupLabel>
+            <SidebarGroupLabel>设置</SidebarGroupLabel>
             <SidebarGroupContent>
               <SidebarMenu>
                 {navSettings
@@ -190,7 +190,7 @@ export function OrganizationSidebar({
 
         {navSecrets.some((item) => item.visible === true) && (
           <SidebarGroup>
-            <SidebarGroupLabel>Secrets</SidebarGroupLabel>
+            <SidebarGroupLabel>密钥</SidebarGroupLabel>
             <SidebarGroupContent>
               <SidebarMenu>
                 {navSecrets
@@ -212,7 +212,7 @@ export function OrganizationSidebar({
 
         {navManage.some((item) => item.visible === true) && (
           <SidebarGroup>
-            <SidebarGroupLabel>Manage</SidebarGroupLabel>
+            <SidebarGroupLabel>管理</SidebarGroupLabel>
             <SidebarGroupContent>
               <SidebarMenu>
                 {navManage

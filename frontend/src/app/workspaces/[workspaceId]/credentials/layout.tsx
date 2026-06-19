@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Credentials | Workspace",
+  title: "凭证 | 工作区",
 }
 
 export default function CredentialsLayout({

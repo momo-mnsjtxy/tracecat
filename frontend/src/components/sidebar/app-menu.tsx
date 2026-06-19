@@ -116,7 +116,7 @@ export function AppMenu({ workspaceId }: { workspaceId: string }) {
             >
               <img src="/icon.png" alt="Tracecat" className="size-6 ml-0.5" />
               <span className="truncate font-semibold text-zinc-700 dark:text-zinc-300">
-                {activeWorkspace?.name || "Select workspace"}
+                {activeWorkspace?.name || "选择工作区"}
               </span>
               <ChevronsUpDown className="ml-auto size-4" />
             </SidebarMenuButton>
@@ -128,7 +128,7 @@ export function AppMenu({ workspaceId }: { workspaceId: string }) {
             sideOffset={4}
           >
             <DropdownMenuLabel className="text-xs font-medium text-muted-foreground">
-              Workspaces
+              工作区
             </DropdownMenuLabel>
             {workspaces?.map((workspace) => (
               <DropdownMenuItem key={workspace.id} asChild>
@@ -165,27 +165,26 @@ export function AppMenu({ workspaceId }: { workspaceId: string }) {
                       <Plus className="size-4" />
                     </div>
                     <div className="font-medium text-muted-foreground">
-                      Add workspace
+                      添加工作区
                     </div>
                   </DropdownMenuItem>
                 </DialogTrigger>
                 <DialogContent className="sm:max-w-[425px]">
                   <form onSubmit={handleCreateWorkspace}>
                     <DialogHeader>
-                      <DialogTitle>Create a new workspace</DialogTitle>
+                      <DialogTitle>创建新工作区</DialogTitle>
                       <DialogDescription>
-                        Workspaces are isolated environments where a team can
-                        work on cases, automations, and credentials.
+                        工作区是独立的环境，团队可以在其中处理工单、自动化和凭证。
                       </DialogDescription>
                     </DialogHeader>
                     <div className="grid gap-4 py-4">
                       <div className="grid gap-2">
-                        <Label htmlFor="workspace-name">Workspace name</Label>
+                        <Label htmlFor="workspace-name">工作区名称</Label>
                         <Input
                           id="workspace-name"
                           value={workspaceName}
                           onChange={(e) => setWorkspaceName(e.target.value)}
-                          placeholder="My workspace"
+                          placeholder="我的工作区"
                           disabled={isCreating}
                         />
                       </div>
@@ -197,14 +196,14 @@ export function AppMenu({ workspaceId }: { workspaceId: string }) {
                           variant="outline"
                           disabled={isCreating}
                         >
-                          Cancel
+                          取消
                         </Button>
                       </DialogClose>
                       <Button
                         type="submit"
                         disabled={isCreating || !workspaceName.trim()}
                       >
-                        {isCreating ? "Creating..." : "Create workspace"}
+                        {isCreating ? "创建中..." : "创建工作区"}
                       </Button>
                     </DialogFooter>
                   </form>
@@ -222,7 +221,7 @@ export function AppMenu({ workspaceId }: { workspaceId: string }) {
                   <div className="flex size-6 items-center justify-center">
                     <BuildingIcon className="size-4" />
                   </div>
-                  <span>Organization</span>
+                  <span>组织管理</span>
                 </Link>
               </DropdownMenuItem>
             )}
@@ -235,7 +234,7 @@ export function AppMenu({ workspaceId }: { workspaceId: string }) {
                   <div className="flex size-6 items-center justify-center">
                     <RadarIcon className="size-4" />
                   </div>
-                  <span>Watchtower</span>
+                  <span>监控塔</span>
                 </Link>
               </DropdownMenuItem>
             )}

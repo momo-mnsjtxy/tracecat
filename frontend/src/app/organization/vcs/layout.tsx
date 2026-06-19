@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "VCS Settings",
+  title: "版本控制设置",
   description:
     "Configure version control system integrations for your organization",
 }

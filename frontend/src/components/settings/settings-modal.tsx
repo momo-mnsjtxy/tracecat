@@ -177,20 +177,20 @@ function SettingsModalContent() {
   return (
     <DialogContent className="h-[600px] max-w-[900px] grid-rows-[100%] gap-0 overflow-hidden p-0">
       <TooltipProvider>
-        <DialogTitle className="sr-only">Settings</DialogTitle>
+        <DialogTitle className="sr-only">设置</DialogTitle>
         <DialogDescription className="sr-only">
-          Manage your account and workspace settings
+          管理您的账户和工作区设置
         </DialogDescription>
         <div className="flex h-full">
           {/* Left nav panel */}
           <div className="flex w-[200px] shrink-0 flex-col border-r">
             <div className="flex flex-col gap-1 p-3">
               <span className="px-2 py-1 text-xs font-medium text-muted-foreground">
-                Account
+                账户
               </span>
               <NavItem
                 icon={UserIcon}
-                label="Profile"
+                label="个人资料"
                 section="profile"
                 activeSection={displayedSection}
                 onSelect={setActiveSection}
@@ -199,41 +199,41 @@ function SettingsModalContent() {
               {showWorkspaceNav && (
                 <>
                   <span className="mt-3 px-2 py-1 text-xs font-medium text-muted-foreground">
-                    Workspace
+                    工作区
                   </span>
                   {canAdministerWorkspace && (
                     <>
                       <NavItem
                         icon={Settings2}
-                        label="General"
+                        label="常规"
                         section="workspace-general"
                         activeSection={displayedSection}
                         onSelect={setActiveSection}
                       />
                       <NavItem
                         icon={WorkflowIcon}
-                        label="Workflows"
+                        label="工作流"
                         section="workspace-runtime"
                         activeSection={displayedSection}
                         onSelect={setActiveSection}
                       />
                       <NavItem
                         icon={Cpu}
-                        label="AI models"
+                        label="AI 模型"
                         section="workspace-models"
                         activeSection={displayedSection}
                         onSelect={setActiveSection}
                       />
                       <NavItem
                         icon={FileIcon}
-                        label="Files"
+                        label="文件"
                         section="workspace-files"
                         activeSection={displayedSection}
                         onSelect={setActiveSection}
                       />
                       <NavItem
                         icon={GitBranchIcon}
-                        label="Git sync"
+                        label="Git 同步"
                         section="workspace-sync"
                         activeSection={displayedSection}
                         onSelect={setActiveSection}
@@ -255,7 +255,7 @@ function SettingsModalContent() {
                 }}
               >
                 <LogOut className="size-4" />
-                Sign out
+                退出登录
               </button>
             </div>
           </div>

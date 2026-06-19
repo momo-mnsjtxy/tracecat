@@ -147,7 +147,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   const navWorkspace: NavItem[] = useMemo(
     () => [
       {
-        title: "Chat",
+        title: "对话",
         url: `${basePath}/chat`,
         icon: BotIcon,
         tag: "Beta",
@@ -159,21 +159,21 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           : () => setLockedFeatureDialogOpen(true),
       },
       {
-        title: "Workflows",
+        title: "工作流",
         url: `${basePath}/workflows`,
         icon: WorkflowIcon,
         isActive: pathname?.startsWith(`${basePath}/workflows`),
         visible: canViewWorkflows === true,
       },
       {
-        title: "Cases",
+        title: "工单",
         url: `${basePath}/cases`,
         icon: LayersIcon,
         isActive: pathname?.startsWith(`${basePath}/cases`),
         visible: canViewCases === true,
       },
       {
-        title: "Agents",
+        title: "智能体",
         url: `${basePath}/agents`,
         icon: MousePointerClickIcon,
         isActive: pathname?.startsWith(`${basePath}/agents`),
@@ -184,42 +184,42 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           : () => setLockedFeatureDialogOpen(true),
       },
       {
-        title: "Tables",
+        title: "数据表",
         url: `${basePath}/tables`,
         icon: Table2Icon,
         isActive: pathname?.startsWith(`${basePath}/tables`),
         visible: canViewTables === true,
       },
       {
-        title: "Variables",
+        title: "变量",
         url: `${basePath}/variables`,
         icon: VariableIcon,
         isActive: pathname?.startsWith(`${basePath}/variables`),
         visible: canViewVariables === true,
       },
       {
-        title: "Credentials",
+        title: "凭证",
         url: `${basePath}/credentials`,
         icon: KeyRound,
         isActive: pathname?.startsWith(`${basePath}/credentials`),
         visible: canViewSecrets === true,
       },
       {
-        title: "Integrations",
+        title: "集成",
         url: `${basePath}/integrations`,
         icon: BlocksIcon,
         isActive: pathname?.startsWith(`${basePath}/integrations`),
         visible: canViewIntegrations === true,
       },
       {
-        title: "MCP servers",
+        title: "MCP 服务器",
         url: `${basePath}/mcp-servers`,
         icon: Sparkles,
         isActive: pathname?.startsWith(`${basePath}/mcp-servers`),
         visible: canViewIntegrations === true,
       },
       {
-        title: "Skills",
+        title: "技能",
         url: `${basePath}/skills`,
         icon: Pyramid,
         isActive: pathname?.startsWith(`${basePath}/skills`),
@@ -230,7 +230,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         visible: canViewAgents === true,
       },
       {
-        title: "Actions",
+        title: "动作",
         url: `${basePath}/actions`,
         icon: BoxIcon,
         isActive: pathname?.startsWith(`${basePath}/actions`),
@@ -257,14 +257,14 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 
   const navMonitor: NavItem[] = [
     {
-      title: "Runs",
+      title: "运行记录",
       url: `${basePath}/runs`,
       icon: ListVideoIcon,
       isActive: pathname?.startsWith(`${basePath}/runs`),
       visible: canViewWorkflows === true,
     },
     {
-      title: "Approvals",
+      title: "审批",
       url: `${basePath}/inbox`,
       icon: ListChecksIcon,
       isActive: pathname?.startsWith(`${basePath}/inbox`),
@@ -289,7 +289,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             <SidebarGroup>
               <SidebarGroupLabel asChild>
                 <CollapsibleTrigger className="w-full">
-                  Workspace
+                  工作区
                   <ChevronDown className="ml-auto size-4 transition-transform group-data-[state=open]/collapsible:rotate-180" />
                 </CollapsibleTrigger>
               </SidebarGroupLabel>
@@ -370,7 +370,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             <SidebarGroup>
               <SidebarGroupLabel asChild>
                 <CollapsibleTrigger className="w-full">
-                  Monitor
+                  监控
                   <ChevronDown className="ml-auto size-4 transition-transform group-data-[state=open]/collapsible:rotate-180" />
                 </CollapsibleTrigger>
               </SidebarGroupLabel>
@@ -414,7 +414,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           manageItems={[
             canViewMembers === true
               ? {
-                  title: "Members",
+                  title: "成员",
                   href: `${basePath}/members`,
                   icon: UsersIcon,
                   isActive: pathname?.startsWith(`${basePath}/members`),
@@ -422,7 +422,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               : null,
             canViewServiceAccounts === true && serviceAccountsEnabled
               ? {
-                  title: "Service accounts",
+                  title: "服务账户",
                   href: `${basePath}/service-accounts`,
                   icon: BotIcon,
                   isActive: pathname?.startsWith(
@@ -432,7 +432,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               : null,
             canViewMcpAccess === true
               ? {
-                  title: "MCP access",
+                  title: "MCP 访问",
                   href: `${basePath}/mcp`,
                   icon: TerminalIcon,
                   isActive: pathname?.startsWith(`${basePath}/mcp`),

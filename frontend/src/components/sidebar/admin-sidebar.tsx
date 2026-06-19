@@ -39,25 +39,25 @@ export function AdminSidebar({
 
   const navPlatform = [
     {
-      title: "Organizations",
+      title: "组织",
       url: "/admin/organizations",
       icon: BuildingIcon,
       isActive: pathname?.includes("/admin/organizations"),
     },
     {
-      title: "Users",
+      title: "用户",
       url: "/admin/users",
       icon: UsersIcon,
       isActive: pathname?.includes("/admin/users"),
     },
     {
-      title: "Tiers",
+      title: "套餐",
       url: "/admin/tiers",
       icon: LayersIcon,
       isActive: pathname?.includes("/admin/tiers"),
     },
     {
-      title: "Agent",
+      title: "智能体",
       url: "/admin/agent",
       icon: BotIcon,
       isActive: pathname?.includes("/admin/agent"),
@@ -66,17 +66,17 @@ export function AdminSidebar({
 
   const navRegistry = [
     {
-      title: "Repositories",
+      title: "仓库",
       url: "/admin/registry",
       isActive: pathname === "/admin/registry",
     },
     {
-      title: "Versions",
+      title: "版本",
       url: "/admin/registry/versions",
       isActive: pathname?.includes("/admin/registry/versions"),
     },
     {
-      title: "Settings",
+      title: "设置",
       url: "/admin/registry/settings",
       isActive: pathname?.includes("/admin/registry/settings"),
     },
@@ -86,7 +86,7 @@ export function AdminSidebar({
     <Sidebar collapsible="offcanvas" variant="inset" {...props}>
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Platform</SidebarGroupLabel>
+          <SidebarGroupLabel>平台</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {navPlatform.map((item) => (
@@ -102,7 +102,7 @@ export function AdminSidebar({
               <SidebarMenuItem>
                 <div className="flex w-full items-center gap-2 overflow-hidden rounded-md py-1.5 px-2 text-left text-[13px] text-zinc-700 dark:text-zinc-300">
                   <BookOpenIcon className="size-4 shrink-0" />
-                  <span className="font-medium">Registry</span>
+                  <span className="font-medium">注册表</span>
                 </div>
                 <SidebarMenuSub>
                   {navRegistry.map((subItem) => (
@@ -127,9 +127,9 @@ export function AdminSidebar({
       <SidebarFooter>
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton onClick={handleLogout} tooltip="Logout">
+            <SidebarMenuButton onClick={handleLogout} tooltip="退出登录">
               <LogOutIcon />
-              <span>Logout</span>
+              <span>退出登录</span>
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>

@@ -319,11 +319,11 @@ function NoWorkspaces() {
   return (
     <main className="container flex size-full max-w-[400px] flex-col items-center justify-center space-y-4">
       <Image src={TracecatIcon} alt="Tracecat" className="mb-4 size-16" />
-      <h1 className="text-2xl font-semibold tracking-tight">No workspaces</h1>
+      <h1 className="text-2xl font-semibold tracking-tight">没有工作区</h1>
       <span className="text-center text-muted-foreground">
         {canCreateWorkspace
-          ? "There are no workspaces yet. Create one to get started."
-          : "You are not a member of any workspace. Please contact your administrator."}
+          ? "还没有工作区。创建一个开始使用吧。"
+          : "您不是任何工作区的成员。请联系管理员。"}
       </span>
       <div className="flex gap-2">
         {canCreateWorkspace && (
@@ -333,20 +333,20 @@ function NoWorkspaces() {
             disabled={isCreating}
           >
             <Plus className="mr-2 size-4" />
-            <span>{isCreating ? "Creating..." : "Create workspace"}</span>
+            <span>{isCreating ? "创建中..." : "创建工作区"}</span>
           </Button>
         )}
         {user?.isSuperuser && (
           <Button variant="outline" asChild>
             <Link href="/admin">
               <Shield className="mr-2 size-4" />
-              <span>Admin</span>
+              <span>管理后台</span>
             </Link>
           </Button>
         )}
         <Button variant="outline" onClick={handleLogout}>
           <LogOut className="mr-2 size-4" />
-          <span>Logout</span>
+          <span>退出登录</span>
         </Button>
       </div>
     </main>

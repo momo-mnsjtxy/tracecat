@@ -46,17 +46,17 @@ def resolve_oss_default_entitlements(
     Existing OSS deployments can preserve prior behavior by mapping enabled
     feature flags to their corresponding entitlement groups.
     """
-    # Fresh install path.
+    # Fresh install path: all entitlements enabled by default.
     if not feature_flags_env:
         return EffectiveEntitlements(
             custom_registry=True,
-            git_sync=False,
-            agent_addons=False,
-            case_addons=False,
-            rbac_addons=False,
-            service_accounts=False,
-            workspace_chat=False,
-            watchtower=False,
+            git_sync=True,
+            agent_addons=True,
+            case_addons=True,
+            rbac_addons=True,
+            service_accounts=True,
+            workspace_chat=True,
+            watchtower=True,
         )
 
     # Existing install path: map legacy feature flags to entitlement groups.
