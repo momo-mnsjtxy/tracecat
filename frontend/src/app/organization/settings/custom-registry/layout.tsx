@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Custom registry | Organization",
+  title: "自定义注册表 | 组织",
 }
 
 export default function CustomRegistryLayout({

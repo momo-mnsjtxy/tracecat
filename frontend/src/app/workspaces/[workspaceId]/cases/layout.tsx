@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import { CasesRouteLayout } from "@/components/cases/cases-route-layout"
 
 export const metadata: Metadata = {
-  title: "Cases",
+  title: "工单",
 }
 
 export default function CasesLayout({

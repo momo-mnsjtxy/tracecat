@@ -1074,7 +1074,7 @@ TRACECAT__ALLOWED_ATTACHMENT_MIME_TYPES = {
 """The allowed MIME types for case attachment files."""
 
 # === Enterprise Edition === #
-ENTERPRISE_EDITION = env_bool("ENTERPRISE_EDITION", default=False)
+ENTERPRISE_EDITION = env_bool("ENTERPRISE_EDITION", default=True)
 """Whether the enterprise edition is enabled."""
 
 TRACECAT__EE_MULTI_TENANT = env_bool("TRACECAT__EE_MULTI_TENANT", default=False)

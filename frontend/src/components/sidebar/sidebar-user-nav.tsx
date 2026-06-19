@@ -42,14 +42,14 @@ export function SidebarUserNav({
       <Separator className="my-1" />
       {showManageLabel ? (
         <div className="px-2 py-1 text-xs font-medium text-muted-foreground">
-          Manage
+          管理
         </div>
       ) : null}
 
       <SidebarMenuItem>
-        <SidebarMenuButton onClick={() => setOpen(true)} tooltip="Settings">
+        <SidebarMenuButton onClick={() => setOpen(true)} tooltip="设置">
           <Settings className="size-4" />
-          <span>Settings</span>
+          <span>设置</span>
         </SidebarMenuButton>
       </SidebarMenuItem>
 
@@ -71,26 +71,26 @@ export function SidebarUserNav({
               <SidebarMenuButton asChild>
                 <Link href="/admin">
                   <ShieldCheckIcon className="size-4" />
-                  <span>Admin</span>
+                  <span>管理后台</span>
                 </Link>
               </SidebarMenuButton>
             </TooltipTrigger>
             <TooltipContent side="top">
-              {isLoading ? "..." : (organization?.name ?? "Organization")}
+              {isLoading ? "..." : (organization?.name ?? "组织")}
             </TooltipContent>
           </Tooltip>
         </SidebarMenuItem>
       )}
 
       <SidebarMenuItem>
-        <SidebarMenuButton asChild tooltip="Docs">
+        <SidebarMenuButton asChild tooltip="文档">
           <Link
             href={siteConfig.links.docs}
             target="_blank"
             rel="noopener noreferrer"
           >
             <BookText className="size-4" />
-            <span>Docs</span>
+            <span>文档</span>
           </Link>
         </SidebarMenuButton>
       </SidebarMenuItem>
